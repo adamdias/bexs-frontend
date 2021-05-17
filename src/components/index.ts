@@ -1,6 +1,7 @@
-import Box from './Box';
 import Card from './Card';
 import Container from './Container';
+import Header from './Header';
+import Input from './Input';
 import Text from './Text';
 
-export { Box, Card, Container, Text };
+export { Card, Container, Header, Input, Text };

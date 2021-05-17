@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "skipLibCheck": true,
-    "target": "esnext",
+    "target": "es5",
     "module": "esnext",
     "lib": [
-      "ES6",
-      "DOM"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
     "allowJs": true,
     "jsx": "react-jsx",

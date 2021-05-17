@@ -11,6 +11,7 @@ type CardModifiersConfig = {
   bgPrimary: ModifierConfigValue;
   bgGray: ModifierConfigValue;
   bgGrayLight: ModifierConfigValue;
+  bgGrayDark: ModifierConfigValue;
 };
 
 export type CardModifier = keyof CardModifiersConfig;
@@ -22,6 +23,7 @@ const CARD_MODIFIERS_CONFIG: CardModifiersConfig = {
   bgPrimary: ({ theme: { pallete } }) => `background-color: ${pallete.primary};`,
   bgGray: ({ theme: { pallete } }) => `background-color: ${pallete.gray};`,
   bgGrayLight: ({ theme: { pallete } }) => `background-color: ${pallete.grayLight};`,
+  bgGrayDark: ({ theme: { pallete } }) => `background-color: ${pallete.grayDark};`,
 };
 
 export const Card = styled.div<CardProps>`

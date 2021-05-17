@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { applyStyleModifiers } from 'styled-components-modifiers';
-import { ModifierConfigValue } from 'styled-components-modifiers/lib/types';
+import { applyStyleModifiers, ModifierConfigValue } from 'styled-components-modifiers';
 
 import { TextProps } from '.';
 
@@ -19,6 +18,7 @@ type TextModifiersConfig = {
   primary: ModifierConfigValue;
   gray: ModifierConfigValue;
   grayLight: ModifierConfigValue;
+  grayDark: ModifierConfigValue;
 
   // alignment
   center: ModifierConfigValue;
@@ -67,6 +67,7 @@ const TEXT_MODIFIERS_CONFIG: TextModifiersConfig = {
   primary: ({ theme: { pallete } }) => `color: ${pallete.primary};`,
   gray: ({ theme: { pallete } }) => `color: ${pallete.gray};`,
   grayLight: ({ theme: { pallete } }) => `color: ${pallete.grayLight};`,
+  grayDark: ({ theme: { pallete } }) => `color: ${pallete.grayDark};`,
 
   // alignment
   center: () => 'text-align: center;',
@@ -82,5 +83,6 @@ const TEXT_MODIFIERS_CONFIG: TextModifiersConfig = {
 
 export const Text = styled.p<TextProps>`
   color: ${({ theme: { pallete } }) => pallete.black};
+
   ${applyStyleModifiers(TEXT_MODIFIERS_CONFIG)};
 `;

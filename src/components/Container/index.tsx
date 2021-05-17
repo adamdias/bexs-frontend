@@ -10,4 +10,4 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
   return <S.Container>{children}</S.Container>;
 };
 
-export default Container;
+export default React.memo(Container);

@@ -4,6 +4,7 @@ export type Pallete = {
   primary: string;
   gray: string;
   grayLight: string;
+  grayDark: string;
 };
 
 const pallete: Pallete = {
@@ -12,6 +13,7 @@ const pallete: Pallete = {
   primary: '#de4b4b',
   gray: '#c9c9c9',
   grayLight: '#f7f7f7',
+  grayDark: '#707070',
 };
 
 export default pallete;

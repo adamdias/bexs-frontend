@@ -11,4 +11,4 @@ const Card: React.FC<CardProps> = ({ modifiers, children }) => {
   return <S.Card modifiers={modifiers}>{children}</S.Card>;
 };
 
-export default Card;
+export default React.memo(Card);
