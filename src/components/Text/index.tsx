@@ -8,7 +8,7 @@ export type TextProps = {
   children: React.ReactNode;
 };
 
-const Text = ({ htmlTagName = 'p', modifiers, children }: TextProps) => {
+const Text: React.FC<TextProps> = ({ htmlTagName = 'p', modifiers, children }) => {
   return (
     <S.Text as={htmlTagName} modifiers={modifiers}>
       {children}

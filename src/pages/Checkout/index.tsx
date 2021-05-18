@@ -1,23 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 
-import { Container, Header, Text, Input } from 'components';
+import { Container, Header, Text } from 'components';
+import { ArrowIcon } from 'components/Icons';
 import iconCard from 'global/assets/images/icon-card.svg';
+import { useTheme } from 'styled-components';
 
+import CheckoutForm from './form';
 import * as S from './styled';
 
 const CheckoutPage = () => {
-  const [cardName, setCardName] = useState<string>('');
-
-  const handleOnChange = useCallback(
-    (e) => {
-      setCardName(e.target.value);
-    },
-    [cardName],
-  );
-
-  useEffect(() => {
-    console.log(cardName);
-  }, [cardName]);
+  const theme = useTheme();
 
   return (
     <>
@@ -25,7 +17,12 @@ const CheckoutPage = () => {
       <Container>
         <S.BoxPage>
           <S.BoxPageInfo>
-            <Text modifiers={['white', 'tag']}>Alterar forma de pagamento</Text>
+            <S.BoxPageInfoLink>
+              <S.BoxPageInfoLinkIcon>
+                <ArrowIcon width={15} height={15} direction="left" color={theme.pallete.white} />
+              </S.BoxPageInfoLinkIcon>
+              <Text modifiers={['white', 'tag']}>Alterar forma de pagamento</Text>
+            </S.BoxPageInfoLink>
 
             <S.BoxPageInfoTitle>
               <S.BoxPageInfoImage>
@@ -45,18 +42,7 @@ const CheckoutPage = () => {
               <Text modifiers={['primary', 'tag']}>Confirmação</Text>
             </S.BoxFormStep>
 
-            <S.BoxForm>
-              <Input
-                value={cardName}
-                label="Nome (igual ao cartão)"
-                name="card_name"
-                onChange={handleOnChange}
-                hasError
-                errorMessage="E-mail inválido, coloque outro!"
-              />
-
-              <Input value={cardName} label="Nome (igual ao cartão)" name="card_name" onChange={handleOnChange} />
-            </S.BoxForm>
+            <CheckoutForm />
           </S.BoxPageForm>
         </S.BoxPage>
       </Container>

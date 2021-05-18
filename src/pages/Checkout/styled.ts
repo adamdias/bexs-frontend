@@ -12,6 +12,15 @@ export const BoxPageInfo = styled.div`
   padding: 5rem 1.6rem 5rem 6.4rem;
 `;
 
+export const BoxPageInfoLink = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const BoxPageInfoLinkIcon = styled.div`
+  margin-right: 1.4rem;
+`;
+
 export const BoxPageInfoTitle = styled.div`
   margin-top: 5.4rem;
   width: 100%;
@@ -45,4 +54,14 @@ export const BoxFormStep = styled.div`
 export const BoxForm = styled.form`
   width: 100%;
   background-color: ${({ theme: { pallete } }) => pallete.white};
+`;
+
+export const BoxFormFields = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const BoxFormFieldItem = styled.div`
+  width: 48%;
 `;

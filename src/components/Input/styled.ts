@@ -1,14 +1,16 @@
+import InputMask from 'react-input-mask';
+
 import styled from 'styled-components';
 import { applyStyleModifiers, ModifierConfigValue } from 'styled-components-modifiers';
 
 import { LabelProps, InputProps } from '.';
 
-export const Box = styled.label`
+export const Box = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 6.2rem;
 `;
 
 export type LabelModifiersConfig = {
@@ -24,7 +26,8 @@ export const LABEL_MODIFIERS: LabelModifiersConfig = {
   `,
 };
 
-export const Label = styled.p<LabelProps>`
+export const Label = styled.label<LabelProps>`
+  width: 100%;
   position: absolute;
   transition: all 0.2s ease;
   top: 1rem;
@@ -48,7 +51,8 @@ export const INPUT_MODIFIERS: InputModifiersConfig = {
   `,
 };
 
-export const Input = styled.input<InputProps>`
+export const Input = styled(InputMask)<InputProps>`
+  width: 100%;
   outline: none;
   border: 0;
   border-bottom: 1px solid ${({ theme: { pallete } }) => pallete.gray};
