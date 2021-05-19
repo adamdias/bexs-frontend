@@ -38,7 +38,7 @@ const text: TextTheme = {
     fontSize: '1.6rem',
     fontFamily: 'SF Pro Text',
     textShadow: '0px 1px 2px #000000B3',
-    letterSpacing: '2px',
+    letterSpacing: '0.7px',
   },
 };
 
