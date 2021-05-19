@@ -3,7 +3,7 @@ import { CheckoutFormState } from 'pages/Checkout/form';
 import api from './api';
 
 export type PaymentCheckoutPayload = CheckoutFormState;
-export type PaymentCheckoutData = {
+export type PaymentCheckoutResponse = {
   id: number;
 };
 

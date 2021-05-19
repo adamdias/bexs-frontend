@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Verdana;
+    font-size: 1.7rem;
     font-weight: 400;
     line-height: 1;
     background-color: ${({ theme: { pallete } }) => pallete.grayLight};

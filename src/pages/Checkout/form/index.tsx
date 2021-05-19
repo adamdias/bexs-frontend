@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { Input, Select, Button } from 'components';
 import { useFormik } from 'formik';
 import removeAscent from 'global/helpers/removeAscent';
-import PaymentService from 'global/services/payment';
+import PaymentService, { PaymentCheckoutResponse } from 'global/services/payment';
 
 import * as S from '../styled';
 import validationSchema from './validationSchema';
@@ -43,8 +43,8 @@ const CheckoutForm = ({ cardNumber, cardName, cardExpired, cardCVV }: Props) => 
 
   const handleOnSubmit = async () => {
     try {
-      const data = await PaymentService.paymentCheckout(values);
-      console.log(data);
+      const data: PaymentCheckoutResponse = await PaymentService.paymentCheckout(values);
+      console.log(data.id);
     } catch (err) {
       toast.error('Algo não deu certo, por favor revise os dados informado no formulário!');
     }
