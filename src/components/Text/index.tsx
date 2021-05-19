@@ -16,4 +16,4 @@ const Text: React.FC<TextProps> = ({ htmlTagName = 'p', modifiers, children }) =
   );
 };
 
-export default React.memo(Text);
+export default Text;

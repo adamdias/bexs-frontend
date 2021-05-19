@@ -55,10 +55,13 @@ const TEXT_MODIFIERS_CONFIG: TextModifiersConfig = {
   caption: ({ theme: { text } }) => `
     font-size: ${text.caption.fontSize};
     font-family: ${text.caption.fontFamily};
+    text-shadow: ${text.caption.textShadow};
+    letter-spacing: ${text.presentation.letterSpacing};
   `,
   presentation: ({ theme: { text } }) => `
     font-size: ${text.presentation.fontSize};
     font-family: ${text.presentation.fontFamily};
+    text-shadow: ${text.presentation.textShadow};
   `,
 
   // color
@@ -75,7 +78,7 @@ const TEXT_MODIFIERS_CONFIG: TextModifiersConfig = {
   right: () => 'text-align: right;',
 
   // transform
-  uppercase: () => 'text-transform: uppercase',
+  uppercase: () => 'text-transform: uppercase;',
 
   // weight
   bold: () => 'font-weight: bold;',

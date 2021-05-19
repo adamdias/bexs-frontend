@@ -25,22 +25,22 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
     const [focused, setFocused] = useState<boolean>(false);
 
     const handleOnFocus = useCallback(
-      (e) => {
+      (event: React.FocusEvent<HTMLInputElement>) => {
         setFocused(true);
 
         if (inputProps.onFocus) {
-          inputProps.onFocus(e);
+          inputProps.onFocus(event);
         }
       },
       [inputProps.onFocus],
     );
 
     const handleOnBlur = useCallback(
-      (e) => {
+      (event: React.FocusEvent<HTMLInputElement>) => {
         setFocused(false);
 
         if (inputProps.onBlur) {
-          inputProps.onBlur(e);
+          inputProps.onBlur(event);
         }
       },
       [inputProps.onBlur],

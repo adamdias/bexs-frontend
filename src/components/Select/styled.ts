@@ -7,6 +7,7 @@ import { SelectProps } from '.';
 export const Box = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   position: relative;
   margin-top: 6.2rem;
 `;

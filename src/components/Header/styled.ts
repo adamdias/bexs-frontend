@@ -10,12 +10,13 @@ export const Box = styled.div`
   border-style: solid;
   margin-bottom: 6.5rem;
 
-  @media only screen and (max-width: 45em) {
+  @media only screen and (max-width: 56.25em) {
     display: none;
   }
 `;
 
 export const Content = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 2.4rem 0;

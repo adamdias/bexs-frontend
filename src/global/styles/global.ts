@@ -16,7 +16,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-    @media only screen and (max-width: 60em) {
+    @media only screen and (max-width: 64em) {
+      font-size: 55%;
+    }
+
+    @media only screen and (max-width: 56.25em) {
       font-size: 50%;
     }
   }

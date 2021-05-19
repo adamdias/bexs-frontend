@@ -17,7 +17,7 @@ type CardModifiersConfig = {
 export type CardModifier = keyof CardModifiersConfig;
 
 const CARD_MODIFIERS_CONFIG: CardModifiersConfig = {
-  borderRadius: () => 'border-radius: 5px',
+  borderRadius: () => 'border-radius: 5px;',
   bgBlack: ({ theme: { pallete } }) => `background-color: ${pallete.black};`,
   bgWhite: ({ theme: { pallete } }) => `background-color: ${pallete.white};`,
   bgPrimary: ({ theme: { pallete } }) => `background-color: ${pallete.primary};`,
@@ -27,7 +27,10 @@ const CARD_MODIFIERS_CONFIG: CardModifiersConfig = {
 };
 
 export const Card = styled.div<CardProps>`
+  display: flex;
+  width: ${({ width }) => (width ? width : 100)}%;
+  height: ${({ height }) => (height ? `${height}rem` : 'auto')};
   background-color: ${({ theme: { pallete } }) => pallete.white};
-  width: 100%;
+
   ${applyStyleModifiers(CARD_MODIFIERS_CONFIG)};
 `;

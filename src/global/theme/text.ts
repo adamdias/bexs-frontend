@@ -3,16 +3,16 @@ export type TextDef = {
   fontFamily: string;
 };
 
-export type Text = {
+export type TextTheme = {
   title: TextDef;
   body: TextDef;
   button: TextDef;
   tag: TextDef;
-  caption: TextDef;
-  presentation: TextDef;
+  caption: { textShadow: string } & TextDef;
+  presentation: { textShadow: string; letterSpacing: string } & TextDef;
 };
 
-const text: Text = {
+const text: TextTheme = {
   title: {
     fontSize: '2rem',
     fontFamily: 'Verdana',
@@ -30,12 +30,15 @@ const text: Text = {
     fontFamily: 'SF Pro Text',
   },
   caption: {
-    fontSize: '2.2rem',
+    fontSize: '2.4rem',
     fontFamily: 'SF Pro Text',
+    textShadow: '0px 1px 2px #000000B3',
   },
   presentation: {
     fontSize: '1.6rem',
     fontFamily: 'SF Pro Text',
+    textShadow: '0px 1px 2px #000000B3',
+    letterSpacing: '2px',
   },
 };
 
