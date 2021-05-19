@@ -14,7 +14,6 @@ const CheckoutPage = () => {
   const [cardName, setCardName] = useState<string>('');
   const [cardExpired, setCardExpired] = useState<string>('');
   const [cardCVV, setCardCVV] = useState<string>('');
-  const [cardInstallment, setCardInstallment] = useState<string>('firstDisabled');
   const [cardCVVFocused, setCardCVVFocused] = useState<boolean>(false);
 
   const handleOnChangeCardNumber = useCallback(
@@ -45,38 +44,18 @@ const CheckoutPage = () => {
     [cardCVV],
   );
 
-  const handleOnChangeCardInstallment = useCallback(
-    (value: string) => {
-      setCardInstallment(value);
-    },
-    [cardInstallment],
-  );
-
   const handleOnFocusCardCVV = useCallback(
     (value: boolean) => {
       setCardCVVFocused(value);
     },
-    [cardInstallment],
+    [cardCVV],
   );
 
   const handleOnBlurCardCVV = useCallback(
     (value: boolean) => {
       setCardCVVFocused(value);
     },
-    [cardInstallment],
-  );
-
-  const handleOnCLickContinue = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
-      event.preventDefault();
-
-      console.log(cardNumber);
-      console.log(cardName);
-      console.log(cardExpired);
-      console.log(cardCVV);
-      console.log(cardInstallment);
-    },
-    [cardNumber, cardName, cardExpired, cardCVV, cardInstallment],
+    [cardCVV],
   );
 
   return (

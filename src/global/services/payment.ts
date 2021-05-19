@@ -9,7 +9,7 @@ export type PaymentCheckoutData = {
 
 const paymentCheckout = async (payload: PaymentCheckoutPayload) => {
   try {
-    const response = await api.post('/v1/payments/checkout', payload);
+    const response = await api.post('/pagar', payload);
     return response.data;
   } catch (err) {
     console.log(err);

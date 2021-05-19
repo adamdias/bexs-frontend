@@ -144,8 +144,8 @@ const CheckoutForm = ({ cardNumber, cardName, cardExpired, cardCVV }: Props) => 
             onChange={handleSetFieldValue('cardCVV')}
             onFocus={handleOnFocusCardCVV}
             onBlur={handleOnBlurCardCVV}
-            hasError={errors.cardExpired != null}
-            errorMessage={errors.cardExpired}
+            hasError={errors.cardCVV != null}
+            errorMessage={errors.cardCVV}
             mask="999"
           />
         </S.BoxFormFieldItem>
@@ -155,8 +155,8 @@ const CheckoutForm = ({ cardNumber, cardName, cardExpired, cardCVV }: Props) => 
         value={values.cardInstallment}
         name="cardInstallment"
         onChange={handleSetFieldValue('cardInstallment')}
-        hasError={errors.cardExpired != null}
-        errorMessage={errors.cardExpired}
+        hasError={errors.cardInstallment != null}
+        errorMessage={errors.cardInstallment}
       >
         <option disabled value="firstDisabled">
           Número de parcelas

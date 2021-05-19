@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://apitest.com',
+  baseURL: 'https://ficticioapi.com.br',
 });
 
 export default api;
