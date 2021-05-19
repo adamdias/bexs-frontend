@@ -8,8 +8,8 @@ export type TextTheme = {
   body: TextDef;
   button: TextDef;
   tag: TextDef;
-  caption: { textShadow: string } & TextDef;
-  presentation: { textShadow: string; letterSpacing: string } & TextDef;
+  caption: { textShadow: string; letterSpacing: string } & TextDef;
+  presentation: { textShadow: string } & TextDef;
 };
 
 const text: TextTheme = {
@@ -33,12 +33,12 @@ const text: TextTheme = {
     fontSize: '2.4rem',
     fontFamily: 'SF Pro Text',
     textShadow: '0px 1px 2px #000000B3',
+    letterSpacing: '5px',
   },
   presentation: {
     fontSize: '1.6rem',
     fontFamily: 'SF Pro Text',
     textShadow: '0px 1px 2px #000000B3',
-    letterSpacing: '0.7px',
   },
 };
 

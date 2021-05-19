@@ -16,47 +16,29 @@ const CheckoutPage = () => {
   const [cardCVV, setCardCVV] = useState<string>('');
   const [cardCVVFocused, setCardCVVFocused] = useState<boolean>(false);
 
-  const handleOnChangeCardNumber = useCallback(
-    (value: string) => {
-      setCardNumber(value);
-    },
-    [cardNumber],
-  );
+  const handleOnChangeCardNumber = useCallback((value: string) => {
+    setCardNumber(value);
+  }, []);
 
-  const handleOnChangeCardName = useCallback(
-    (value: string) => {
-      setCardName(value);
-    },
-    [cardName],
-  );
+  const handleOnChangeCardName = useCallback((value: string) => {
+    setCardName(value);
+  }, []);
 
-  const handleOnChangeCardExpired = useCallback(
-    (value: string) => {
-      setCardExpired(value);
-    },
-    [cardExpired],
-  );
+  const handleOnChangeCardExpired = useCallback((value: string) => {
+    setCardExpired(value);
+  }, []);
 
-  const handleOnChangeCardCVV = useCallback(
-    (value: string) => {
-      setCardCVV(value);
-    },
-    [cardCVV],
-  );
+  const handleOnChangeCardCVV = useCallback((value: string) => {
+    setCardCVV(value);
+  }, []);
 
-  const handleOnFocusCardCVV = useCallback(
-    (value: boolean) => {
-      setCardCVVFocused(value);
-    },
-    [cardCVV],
-  );
+  const handleOnFocusCardCVV = useCallback((value: boolean) => {
+    setCardCVVFocused(value);
+  }, []);
 
-  const handleOnBlurCardCVV = useCallback(
-    (value: boolean) => {
-      setCardCVVFocused(value);
-    },
-    [cardCVV],
-  );
+  const handleOnBlurCardCVV = useCallback((value: boolean) => {
+    setCardCVVFocused(value);
+  }, []);
 
   return (
     <>

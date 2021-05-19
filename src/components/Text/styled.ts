@@ -56,7 +56,11 @@ const TEXT_MODIFIERS_CONFIG: TextModifiersConfig = {
     font-size: ${text.caption.fontSize};
     font-family: ${text.caption.fontFamily};
     text-shadow: ${text.caption.textShadow};
-    letter-spacing: ${text.presentation.letterSpacing};
+    letter-spacing: ${text.caption.letterSpacing};
+
+    @media only screen and (max-width: 56.25em) {
+      letter-spacing: 1px;
+    }
   `,
   presentation: ({ theme: { text } }) => `
     font-size: ${text.presentation.fontSize};
