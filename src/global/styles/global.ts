@@ -27,13 +27,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Verdana;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1;
     background-color: ${({ theme: { pallete } }) => pallete.grayLight};
     color: ${({ theme: { pallete } }) => pallete.black};
     min-height: 100vh;
   }
+
+
 `;
 
 export default GlobalStyle;
